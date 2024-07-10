@@ -1,0 +1,16 @@
+name: CICDNombreUsuario
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: Imprimir mensaje de despliegue
+      run: echo "Despliegue realizado con éxito"
